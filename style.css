@@ -1,0 +1,77 @@
+
+:root{--bg:#0b0c10;--panel:#12141a;--ink:#e9e5dc;--mute:#9a968c;--line:#23262f;--gold:#e3a857;--gold2:#f6d8a0;--r:14px}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Charis SIL",Charter,Georgia,"Times New Roman",serif;-webkit-font-smoothing:antialiased}
+a{color:var(--gold2);text-decoration-color:#6b5a3a;text-underline-offset:3px}a:hover{color:#fff}
+.wrap{max-width:46rem;margin:0 auto;padding:0 16px}
+.wide{max-width:64rem}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(11,12,16,.92);backdrop-filter:blur(6px);z-index:5}
+header.top .wrap{display:flex;align-items:center;gap:18px;min-height:60px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:600 18px/1 system-ui,"Segoe UI",Arial,sans-serif;letter-spacing:.04em}
+.brand svg{width:28px;height:28px}
+nav{margin-left:auto;display:flex;gap:4px 16px;flex-wrap:wrap;font:15px system-ui,"Segoe UI",Arial,sans-serif}
+nav a{color:var(--mute);text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a.on{color:var(--ink);border-bottom-color:var(--gold)}
+.hero{padding:72px 0 40px}
+.hero .disc{width:120px;height:120px;margin-bottom:28px}
+h1{font:600 clamp(32px,6vw,48px)/1.12 Georgia,"Charis SIL",serif;margin:0 0 16px;letter-spacing:-.01em}
+h2{font:600 24px/1.25 Georgia,serif;margin:44px 0 12px}
+h3{font:600 19px/1.3 system-ui,"Segoe UI",Arial,sans-serif;margin:6px 0}
+.lede{font-size:20px;color:#d8d3c8;max-width:36rem}
+.tag{display:inline-block;font:600 12px/1 system-ui,"Segoe UI",Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;border-radius:99px;border:1px solid var(--line);color:var(--mute)}
+.tag.live{color:#8fd3a3;border-color:#2c5a3c}.tag.wip{color:var(--gold);border-color:#6b5a3a}.tag.test{color:#e59a8a;border-color:#6b3a33}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:20px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:20px;font:15.5px/1.55 system-ui,"Segoe UI",Arial,sans-serif}
+.card p{margin:8px 0 0;color:#c9c5ba}
+.card.link{text-decoration:none;color:inherit;display:block;transition:border-color .15s,transform .15s}
+.card.link:hover{border-color:var(--gold);transform:translateY(-2px)}
+.status{border-left:3px solid var(--gold);padding:4px 0 4px 16px;color:#d8d3c8;margin:28px 0}
+footer{border-top:1px solid var(--line);margin-top:72px;padding:28px 0 48px;color:var(--mute);font:14px/1.6 system-ui,"Segoe UI",Arial,sans-serif}
+.story h2{border-top:1px solid var(--line);padding-top:28px}
+.story p{margin:0 0 1.05em}
+blockquote{margin:22px 0;padding:14px 18px;background:#14161d;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;color:#cfcabd;font-style:italic}
+.round{font:700 .8em system-ui,"Segoe UI",Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+.pill{display:inline-block;margin:6px 8px 0 0;padding:7px 14px;border:1px solid var(--line);border-radius:99px;font:15px system-ui,"Segoe UI",Arial,sans-serif;text-decoration:none;color:var(--ink)}
+.pill:hover{border-color:var(--gold)}
+.note{color:var(--mute);font:14px/1.5 system-ui,"Segoe UI",Arial,sans-serif}
+code{background:#1a1d25;padding:1px 6px;border-radius:5px;font-size:.9em}
+@media(max-width:560px){body{font-size:16.5px}.hero{padding-top:44px}nav{margin-left:0}}
+
+html{font-size:calc(100% * var(--fs,1))}
+.herobox{position:relative;margin:28px 0 8px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9;background:#000 center/cover no-repeat}
+.herobox::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,12,16,.92) 0%,rgba(11,12,16,.35) 38%,rgba(11,12,16,0) 62%)}
+.herobox .copy{position:absolute;left:0;right:0;bottom:0;padding:0 28px 26px;z-index:2}
+.herobox h1{margin:0 0 8px;text-shadow:0 2px 18px #000}
+.herobox .lede{margin:0;text-shadow:0 1px 12px #000}
+.banner{display:block;width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);margin:22px 0 6px}
+figure.nib{float:right;width:min(42%,300px);margin:6px 0 18px 24px}
+figure.nib img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);display:block}
+figure.nib figcaption{font:13px/1.4 system-ui,"Segoe UI",Arial,sans-serif;color:var(--mute);margin-top:6px}
+.clear{clear:both}
+h1,h2,h3,p,li{overflow-wrap:anywhere}
+img{max-width:100%}
+html,body{overflow-x:hidden}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.toc-ch{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;font-family:system-ui,"Segoe UI",Arial,sans-serif}
+.toc-ch h2{font:600 18px/1.3 Georgia,serif;margin:0 0 2px;border:0;padding:0}
+.toc-ch ul{margin:8px 0 0;padding-left:18px;font-size:14.5px;line-height:1.55;color:var(--mute)}
+.toc-ch li{margin:1px 0}
+.crumb{font:14px system-ui,"Segoe UI",Arial,sans-serif;color:var(--mute);margin:28px 0 0}
+.incontents{margin:14px 0 6px;font:15px system-ui,"Segoe UI",Arial,sans-serif;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 16px}
+.incontents summary{cursor:pointer;color:var(--gold2)}
+.incontents ul{margin:8px 0 2px;padding-left:20px;line-height:1.7}
+.chnav{display:flex;justify-content:space-between;gap:12px;margin:26px 0;font:15px system-ui,"Segoe UI",Arial,sans-serif;flex-wrap:wrap}
+.chnav a{border:1px solid var(--line);border-radius:10px;padding:10px 14px;text-decoration:none;color:var(--ink);flex:1 1 220px}
+.chnav a:hover{border-color:var(--gold)}
+.chnav a:last-child{text-align:right}
+.crumbrow{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:28px}
+.crumbrow .crumb{margin:0}
+main.wrap{padding-top:18px;padding-bottom:8px}
+.textctl{flex:none}
+.textctl button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:4px 11px;margin-left:6px;font:600 14px system-ui,sans-serif;cursor:pointer}
+.textctl button:hover{border-color:var(--gold)}
+blockquote.ruling{font-style:normal;font-family:system-ui,"Segoe UI",Arial,sans-serif;font-size:.93em;border-left-color:#6b8fb0;background:#12161d}
+h3.scene,.story h2{scroll-margin-top:76px}
+
+@media(max-width:560px){.herobox{aspect-ratio:4/3}.herobox .copy{padding:0 16px 16px}.herobox .lede{font-size:16px}figure.nib{float:none;width:100%;max-width:340px;margin:12px auto}}
